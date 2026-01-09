@@ -23,7 +23,7 @@ def dish_order():
         ).strip()
 
         if order_item.lower() == "exit":
-            print("\nThank you for visiting ANURAG CAFE ☕")
+            print("\nThank you for visiting ANURAG CAFE ")
             break
 
         elif order_item.strip() == "view cart":
@@ -37,7 +37,7 @@ def dish_order():
                 print("Cart is empty 🛒")
         elif order_item in cafe_menu:
             cart.append(order_item)
-            print(f"{order_item} added to cart ✅")
+            print(f"{order_item} added to cart ")
 
             choice = input(f"Anything else with your {order_item}? [YES / NO]: ").strip().lower()
 
@@ -49,16 +49,17 @@ def dish_order():
                 for item in cart:
                     total_bill += cafe_menu[item]
 
-                print("\n🧾 BILL SUMMARY")
+                print("\n BILL SUMMARY")
                 for item in cart:
                     print(f"- {item} : ${cafe_menu[item]}")
 
-                print(f"\n💰 Total Bill: ${total_bill}")
-                print("\nThank you for visiting ANURAG CAFE ☕")
+                print(f"\n Total Bill: ${total_bill}")
+                print("\nThank you for visiting ANURAG CAFE ")
                 break
 
 
             else:
-                print("Please type YES or NO only ❗")
+                print("Please type YES or NO only!")
 
 dish_order()
+
